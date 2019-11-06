@@ -12,7 +12,6 @@
 				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">NOTICE<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="${pageContext.request.contextPath}/notice/noticeList">List</a></li>
-						<li><a href="${pageContext.request.contextPath}/notice/noticeSelect">Select</a></li>
 						<li><a href="${pageContext.request.contextPath}/notice/noticeWrite">Write</a></li>
 					</ul></li>
 					

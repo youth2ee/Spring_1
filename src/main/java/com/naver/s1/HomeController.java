@@ -24,20 +24,6 @@ public class HomeController {
 		return "test";
 	}
 	
-	@RequestMapping("/notice/noticeList")
-	public String noticeList() {
-		return "notice/noticeList";
-	}
-	
-	@RequestMapping("/notice/noticeSelect")
-	public String noticeSelect() {
-		return "notice/noticeSelect";
-	}
-	
-	@RequestMapping("/notice/noticeWrite")
-	public String noticeWrite() {
-		return "notice/noticeWrite";
-	}
 	
 	
 	/**

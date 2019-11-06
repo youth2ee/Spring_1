@@ -11,9 +11,14 @@
 	<h1>Hello world!</h1>
 
 	<P>The time on the server is ${serverTime}.</P>
-	<a href="./test">Go Test</a>
+	<a href="./test">Go Test</a><br>
 	<a href="./notice/noticeList">Go Notice List</a><br>
+
+	<a href="./member/memberJoin">Go Member Join</a><br>
+	<a href="./member/memberLogin">Go Member Login</a><br>
+	
 	<img alt="" src="./resources/images/cha2.jpg">
 	
 </body>
 </html>
+
