@@ -9,6 +9,8 @@ public class NoticeService {
 		this.noticeDAO = new NoticeDAO();
 	}
 	
+	
+	
 	public List<NoticeDTO> noticeList() throws Exception {
 		List<NoticeDTO> ar = noticeDAO.noticeList();
 		return ar;

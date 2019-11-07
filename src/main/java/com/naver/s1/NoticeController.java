@@ -24,6 +24,7 @@ public class NoticeController {
 		noticeService = new NoticeService();
 	}
 	
+	
 	@RequestMapping("noticeList")
 	public ModelAndView noticeList() throws Exception{
 		List<NoticeDTO> ar = noticeService.noticeList();
@@ -35,15 +36,18 @@ public class NoticeController {
 		return mv;
 	}
 	
+	
 	/*
 	 * //한꺼번에 get과 post 둘다 받을 수도 있다.
 	 * 
-	 * @RequestMapping(value = "noticeSelect", method = {RequestMethod.GET,
-	 * RequestMethod.POST}) public void noticeSelect(Model
-	 * model, @RequestParam(value = "n", required = false, defaultValue = "1") int
-	 * num) { String data = "Notice Data"; model.addAttribute("data", data); //리턴을
-	 * 모델로 해도 된다. 다만 귀찮다. }
+	 * @RequestMapping(value = "noticeSelect", method = {RequestMethod.GET,RequestMethod.POST}) 
+	 * public void noticeSelect(Model model, @RequestParam(value = "n", required = false, defaultValue = "1") int num) { 
+	 * String data = "Notice Data"; 
+	 * model.addAttribute("data", data); 
+	 * //리턴을 모델로 해도 된다. 다만 귀찮다. 
+	 * }
 	 */
+	
 	
 	@RequestMapping(value = "noticeSelect", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView noticeSelect(int num) throws Exception {
@@ -57,7 +61,7 @@ public class NoticeController {
 	}
 	
 	//noticeWrite get : 폼작성
-	@RequestMapping(value = "noticeWrite", method = RequestMethod.GET)
+	@RequestMapping(value = "noticeWrite", method = RequestMethod.GET, params = {"num=1, name=pooh"})
 	public String noticeWrite() {
 		return "notice/noticeWrite";
 	}
