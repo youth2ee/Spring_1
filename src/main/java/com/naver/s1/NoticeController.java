@@ -2,6 +2,7 @@ package com.naver.s1;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -18,11 +19,14 @@ import com.naver.s1.notice.NoticeService;
 @Controller
 @RequestMapping("/notice/**")
 public class NoticeController {
+	
+	
+	
+	@Inject
 	private NoticeService noticeService;
 	
-	public NoticeController() {
-		noticeService = new NoticeService();
-	}
+	
+
 	
 	
 	@RequestMapping("noticeList")
@@ -61,7 +65,7 @@ public class NoticeController {
 	}
 	
 	//noticeWrite get : 폼작성
-	@RequestMapping(value = "noticeWrite", method = RequestMethod.GET, params = {"num=1, name=pooh"})
+	@RequestMapping(value = "noticeWrite", method = RequestMethod.GET)
 	public String noticeWrite() {
 		return "notice/noticeWrite";
 	}

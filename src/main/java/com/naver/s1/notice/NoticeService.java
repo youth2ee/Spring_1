@@ -5,12 +5,15 @@ import java.util.List;
 public class NoticeService {
 	private NoticeDAO noticeDAO;
 	
-	public NoticeService() {
-		this.noticeDAO = new NoticeDAO();
+
+	public void setNoticeDAO(NoticeDAO noticeDAO) {
+		this.noticeDAO = noticeDAO;
 	}
 	
 	
 	
+	
+
 	public List<NoticeDTO> noticeList() throws Exception {
 		List<NoticeDTO> ar = noticeDAO.noticeList();
 		return ar;
