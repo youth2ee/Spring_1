@@ -6,8 +6,13 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Repository;
+
 import com.naver.util.DBConnector;
 
+@Scope("prototype")
+@Repository
 public class NoticeDAO {
 	
 	public List<NoticeDTO> noticeList() throws Exception {
