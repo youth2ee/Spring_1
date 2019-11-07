@@ -7,7 +7,7 @@
 	<name>Spring_1</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
-	<!-- 이 위는 각각 다르다.-->
+	<!-- 이 위는 프로젝트마다 각각 다르므로 복사하면 안됨 아래만 복사해라 -->
 	
 	<!-- 변수명 : properties -->
 	<properties>
@@ -28,13 +28,20 @@
 	
 
 	<dependencies>
-	<!-- 내가 입력해야 함 -->
-	<!-- OJDBC -->
-	<dependency>
-		<groupId>com.oracle</groupId>
-		<artifactId>ojdbc6</artifactId>
-		<version>11.2.0.3</version>
-	</dependency>
+		<!-- 내가 입력해야 함 -->
+		<!-- OJDBC -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.3</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-jdbc</artifactId>
+    		<version>${org.springframework-version}</version>
+		</dependency>
 
 		<!-- Spring -->
 		<dependency>

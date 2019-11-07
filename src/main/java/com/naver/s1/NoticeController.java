@@ -60,7 +60,7 @@ public class NoticeController {
 	}
 	
 	//noticeWrite get : 폼작성
-	@RequestMapping(value = "noticeWrite", method = RequestMethod.GET, params = {"num=1, name=pooh"})
+	@RequestMapping(value = "noticeWrite", method = RequestMethod.GET)
 	public String noticeWrite() {
 		return "notice/noticeWrite";
 	}

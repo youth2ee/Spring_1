@@ -6,15 +6,23 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
+import javax.inject.Inject;
+import javax.sql.DataSource;
 
-import com.naver.util.DBConnector;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public class NoticeDAO {
 	
+	@Inject
+	private DataSource dataSource;
+	
+	
 	public List<NoticeDTO> noticeList() throws Exception {
-		Connection con = DBConnector.getConnect();
+		
+		Connection con = dataSource.getConnection();
+		
+		
 		ArrayList<NoticeDTO> ar = new ArrayList<NoticeDTO>();
 		NoticeDTO noticeDTO = null;
 		
@@ -42,7 +50,8 @@ public class NoticeDAO {
 	}
 	
 	public NoticeDTO noticeSelect(int num) throws Exception {
-		Connection con = DBConnector.getConnect();
+		Connection con = dataSource.getConnection();
+		
 		NoticeDTO noticeDTO = null;
 		
 		String sql = "select * from notice where num=?";
@@ -71,7 +80,7 @@ public class NoticeDAO {
 	public int noticeWrite(NoticeDTO noticeDTO) throws Exception {
 		int result = 0;
 	
-		Connection con = DBConnector.getConnect();
+		Connection con = dataSource.getConnection();
 		String sql = "insert into notice values (board_seq.nextval, ?, ?, ?, sysdate, 0)";
 		PreparedStatement st = con.prepareStatement(sql);
 		st.setString(1, noticeDTO.getTitle());
