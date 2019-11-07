@@ -2,6 +2,7 @@ package com.naver.s1;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -12,17 +13,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.naver.s1.notice.NoticeDTO;
-import com.naver.s1.notice.NoticeService;
+import com.naver.notice.NoticeDTO;
+import com.naver.notice.NoticeService;
 
 @Controller
 @RequestMapping("/notice/**")
 public class NoticeController {
-	private NoticeService noticeService;
 	
-	public NoticeController() {
-		noticeService = new NoticeService();
-	}
+	@Inject
+	private NoticeService noticeService;
 	
 	
 	@RequestMapping("noticeList")

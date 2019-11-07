@@ -1,4 +1,4 @@
-package com.naver.s1.notice;
+package com.naver.notice;
 
 import java.sql.Date;
 
