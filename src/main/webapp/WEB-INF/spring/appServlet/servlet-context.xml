@@ -14,7 +14,7 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
-	<!-- 리소스 아래에 있는 애들은 디스패쳐(컨트롤러) 가지말고 리소스 안에서 찾아라 : 사진을 넣어주기 -->
+	<!-- 리소스 아래에 있는 애들은 디스패쳐(컨트롤러) 가지말고, 리소스 안에서 찾아라 : 사진을 넣어주기 -->
 	
 	<!-- <resources mapping="/images/**" location="/images/"/> 이렇게 해줘도 되지만 굳이...?-->
 	
@@ -26,5 +26,5 @@
 	
 	<context:component-scan base-package="com.naver.s1" />
 	<context:component-scan base-package="com.naver.notice" />
-	
+
 </beans:beans>
